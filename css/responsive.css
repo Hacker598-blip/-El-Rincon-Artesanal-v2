@@ -1,0 +1,14 @@
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .hero h1 { font-size: 2rem; }
+  nav ul { flex-direction: column; }
+}
+
+@media (max-width: 480px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero { padding: 4rem 1rem; }
+}
