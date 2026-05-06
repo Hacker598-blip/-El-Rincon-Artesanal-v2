@@ -1,0 +1,12 @@
+[data-theme="light"] {
+  --color-bg: #f5efe6;
+  --color-surface: #ffffff;
+  --color-text: #3e362e;
+  --color-text-secondary: #6c5e52;
+  --color-primary: #b07d4b;
+  --color-primary-hover: #8b5d33;
+  --color-accent: #9c6644;
+  --color-border: #d6cdc4;
+  --color-card-bg: #ffffff;
+  --color-shadow: rgba(0,0,0,0.08);
+}
