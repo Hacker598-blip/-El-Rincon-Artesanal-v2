@@ -1,0 +1,11 @@
+.faq-item {
+  margin-bottom: 1.5rem;
+}
+.question {
+  cursor: pointer;
+  font-weight: 700;
+}
+.answer {
+  display: none;
+}
+.answer.open { display: block; }
