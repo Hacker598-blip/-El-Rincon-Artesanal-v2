@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de – El Rincón Artesanal</title>
+    <link rel="icon" href="../favicon.ico">
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+            const link = document.createElement('link');
+            link.rel = 'stylesheet'; link.href = '../css/themes/' + theme + '.css';
+            link.setAttribute('data-theme-link', '');
+            document.head.appendChild(link);
+        })();
+    </script>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/components/navigation.css">
+    <link rel="stylesheet" href="../css/components/header.css">
+    <link rel="stylesheet" href="../css/components/footer.css">
+    <link rel="stylesheet" href="../css/components/buttons.css">
+    <link rel="stylesheet" href="../css/pages/about.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <div id="site-header"></div>
+    <main class="container about-section">
+        <h1>Luis Manuel Rodríguez Peña</h1>
+        <p>Alfarero con más de 20 años de experiencia, dedicado a preservar la tradición alfarera cubana. Cada pieza es moldeada a mano, utilizando barro local y técnicas transmitidas por generaciones.</p>
+        <p>Filosofía: “La tierra nos habla; mi labor es darle voz”.</p>
+        <img src="../assets/images/team/luis-manuel.jpg" alt="Luis Manuel en el torno" loading="lazy">
+    </main>
+    <div id="site-footer"></div>
+    <script src="../js/config.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/components/navigation.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

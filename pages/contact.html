@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto – El Rincón Artesanal</title>
+    <link rel="icon" href="../favicon.ico">
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+            const link = document.createElement('link');
+            link.rel = 'stylesheet'; link.href = '../css/themes/' + theme + '.css';
+            link.setAttribute('data-theme-link', '');
+            document.head.appendChild(link);
+        })();
+    </script>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/components/navigation.css">
+    <link rel="stylesheet" href="../css/components/header.css">
+    <link rel="stylesheet" href="../css/components/footer.css">
+    <link rel="stylesheet" href="../css/components/buttons.css">
+    <link rel="stylesheet" href="../css/components/forms.css">
+    <link rel="stylesheet" href="../css/pages/contact.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <div id="site-header"></div>
+    <main class="container contact-grid">
+        <div>
+            <h1>Contacto</h1>
+            <p><strong>Teléfono/WhatsApp:</strong> <a href="tel:+5356252842">+53 56252842</a></p>
+            <p><strong>Correo:</strong> example@gmail.com</p>
+            <div class="social-icons">
+                <a href="https://instagram.com/elrinconartesanal" target="_blank" rel="noopener">📷 Instagram</a>
+                <a href="https://facebook.com/elrinconartesanal" target="_blank" rel="noopener">📘 Facebook</a>
+            </div>
+        </div>
+        <form class="contact-form">
+            <label>Nombre</label>
+            <input type="text" required>
+            <label>Mensaje</label>
+            <textarea rows="4"></textarea>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </main>
+    <div id="site-footer"></div>
+    <script src="../js/config.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/components/navigation.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/components/form-validation.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del producto – El Rincón Artesanal</title>
+    <link rel="icon" href="../favicon.ico">
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+            const link = document.createElement('link');
+            link.rel = 'stylesheet'; link.href = '../css/themes/' + theme + '.css';
+            link.setAttribute('data-theme-link', '');
+            document.head.appendChild(link);
+        })();
+    </script>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/components/navigation.css">
+    <link rel="stylesheet" href="../css/components/header.css">
+    <link rel="stylesheet" href="../css/components/footer.css">
+    <link rel="stylesheet" href="../css/components/buttons.css">
+    <link rel="stylesheet" href="../css/pages/product-detail.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <div id="site-header"></div>
+    <main class="container product-detail">
+        <div class="gallery">
+            <img id="product-img" src="" alt="">
+            <button onclick="sliderPrev()">◀</button>
+            <button onclick="sliderNext()">▶</button>
+        </div>
+        <div class="info">
+            <h1 id="product-name"></h1>
+            <p id="product-desc"></p>
+            <span id="product-price" class="price"></span>
+            <ul id="discount-info"></ul>
+            <div class="quantity-selector">
+                <label for="quantity">Cantidad:</label>
+                <input type="number" id="quantity" value="1" min="1">
+            </div>
+            <button id="add-to-cart" class="btn btn-primary">Añadir al carrito</button>
+        </div>
+    </main>
+    <div id="site-footer"></div>
+    <script src="../js/config.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/components/slider.js"></script>
+    <script src="../js/components/navigation.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/pages/product-detail.js"></script>
+</body>
+</html>

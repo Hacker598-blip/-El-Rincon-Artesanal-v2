@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas frecuentes – El Rincón Artesanal</title>
+    <link rel="icon" href="../favicon.ico">
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+            const link = document.createElement('link');
+            link.rel = 'stylesheet'; link.href = '../css/themes/' + theme + '.css';
+            link.setAttribute('data-theme-link', '');
+            document.head.appendChild(link);
+        })();
+    </script>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/components/navigation.css">
+    <link rel="stylesheet" href="../css/components/header.css">
+    <link rel="stylesheet" href="../css/components/footer.css">
+    <link rel="stylesheet" href="../css/components/buttons.css">
+    <link rel="stylesheet" href="../css/pages/faq.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <div id="site-header"></div>
+    <main class="container">
+        <h1>Preguntas frecuentes</h1>
+        <div class="faq-item">
+            <div class="question" onclick="this.nextElementSibling.classList.toggle('open')">¿Realizan envíos a toda Cuba? ▼</div>
+            <div class="answer">Sí, coordinamos el envío a través de agencias de paquetería. El costo depende del destino.</div>
+        </div>
+        <div class="faq-item">
+            <div class="question" onclick="this.nextElementSibling.classList.toggle('open')">¿Qué métodos de pago aceptan? ▼</div>
+            <div class="answer">Aceptamos Transfermóvil, EnZona y pago en efectivo al recibir (en La Habana).</div>
+        </div>
+        <!-- más preguntas... -->
+    </main>
+    <div id="site-footer"></div>
+    <script src="../js/config.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/components/navigation.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
