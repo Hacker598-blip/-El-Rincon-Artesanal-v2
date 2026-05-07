@@ -50,10 +50,14 @@
                 return;
             }
 
+            // Detectar si estamos en pages/ para ajustar la ruta de las imágenes
+            const isInPages = window.location.pathname.includes('/pages/');
+            const basePath = isInPages ? '../' : '';
+
             container.innerHTML = productos.map(p => `
                 <div class="product-card">
                     <div class="image-wrapper">
-                        <img src="${p.image}" alt="${p.name}" loading="lazy">
+                        <img src="${basePath}${p.image}" alt="${p.name}" loading="lazy">
                     </div>
                     <div class="product-info">
                         <h3>${p.name}</h3>
