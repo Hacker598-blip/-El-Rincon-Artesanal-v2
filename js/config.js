@@ -19,7 +19,7 @@ const CONFIG = {
       name: 'Maceta de barro clásica',
       description: 'Ideal para interiores, con acabado rústico. Diámetro 20 cm.',
       price: 450,
-      image: 'assets/images/products/maceta-clasica.jpg',
+      image: 'assets/images/products/maceta-clasica.png',
       category: 'interior',
       style: 'rústico',
       size: 'mediano',
