@@ -4,32 +4,55 @@
   gap: 2rem;
   margin: 2rem 0;
 }
+
 .product-card {
   background: var(--color-card-bg);
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: 0 4px 12px var(--color-shadow);
   transition: transform var(--transition);
+  display: flex;
+  flex-direction: column;
 }
+
 .product-card:hover {
   transform: translateY(-4px);
 }
-.product-card img {
+
+/* Contenedor de imagen con relación de aspecto fija */
+.product-card .image-wrapper {
+  position: relative;
   width: 100%;
-  aspect-ratio: 4 / 3;   /* relación ancho:alto, elige la que prefieras: 4/3, 1/1, 16/9… */
+  padding-top: 75%;   /* 4:3 (ajusta a 100% para 1:1, 56.25% para 16:9) */
+  overflow: hidden;
+  background-color: var(--color-border);
+}
+
+.product-card .image-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   display: block;
-  background-color: var(--color-border);  /* color de fondo mientras carga o si hay transparencia */
 }
+
 .product-info {
   padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
+
 .product-info h3 {
   margin-top: 0;
   font-size: 1.2rem;
 }
+
 .price {
   font-weight: 700;
   color: var(--color-primary);
   font-size: 1.3rem;
+  margin-top: auto;  /* empuja el precio hacia abajo si hace falta */
 }
