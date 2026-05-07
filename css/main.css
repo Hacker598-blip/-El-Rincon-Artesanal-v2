@@ -30,12 +30,11 @@
 
 /* ========== VARIABLES BASE (sobrescritas por temas) ========== */
 :root {
-  /* Colores por defecto (dark) */
   --color-bg: #1e1a17;
   --color-surface: #2b2520;
   --color-text: #ede0d4;
   --color-text-secondary: #b8a99a;
-  --color-primary: #c7925a;    /* terracota cálido */
+  --color-primary: #c7925a;
   --color-primary-hover: #d4a76e;
   --color-accent: #9c6644;
   --color-border: #4a3f38;
@@ -44,7 +43,6 @@
 
   --font-heading: 'Playfair Display', Georgia, serif;
   --font-body: 'Lato', 'Segoe UI', sans-serif;
-
   --radius: 0.5rem;
   --transition: 0.3s ease;
 }
