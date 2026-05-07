@@ -2,7 +2,6 @@
 let assistantActive = false;
 
 function startAssistant() {
-    // Si ya está activo, no hacer nada (o podría reiniciar, pero lo dejamos como toggle)
     if (assistantActive) {
         closeAssistant();
         return;
@@ -12,15 +11,12 @@ function startAssistant() {
     if (!container) return;
 
     assistantActive = true;
-    // Ocultar el catálogo para que el asistente tenga protagonismo
     const grid = document.getElementById('all-products');
     if (grid) grid.style.display = 'none';
 
-    // Cambiar texto del botón
     const btn = document.getElementById('start-assistant');
     if (btn) btn.textContent = '❌ Salir del asistente';
 
-    // Reiniciar preguntas
     respuestas = {};
     paso = 0;
     mostrarPregunta();
@@ -31,16 +27,13 @@ function closeAssistant() {
     const container = document.getElementById('assistant-content');
     if (container) container.innerHTML = '';
 
-    // Mostrar de nuevo el catálogo
     const grid = document.getElementById('all-products');
     if (grid) grid.style.display = '';
 
-    // Restaurar texto del botón
     const btn = document.getElementById('start-assistant');
     if (btn) btn.textContent = '🧑‍🏫 Asistente de selección';
 }
 
-// Variables y lógica de preguntas (se mantiene similar pero dentro de un ámbito controlado)
 let respuestas = {};
 let paso = 0;
 
@@ -81,7 +74,7 @@ function mostrarPregunta() {
         };
         cont.appendChild(btn);
     });
-    // Botón para salir en cualquier momento
+    // Botón para salir
     const salirBtn = document.createElement('button');
     salirBtn.className = 'btn btn-outline';
     salirBtn.textContent = '↩ Volver al catálogo';
@@ -103,7 +96,9 @@ function mostrarResultados() {
     } else {
         cont.innerHTML = filtrados.map(p => `
             <div class="product-card">
-                <img src="${p.image}" alt="${p.name}">
+                <div class="image-wrapper">
+                    <img src="${p.image}" alt="${p.name}">
+                </div>
                 <div class="product-info">
                     <h3>${p.name}</h3>
                     <p>${p.description}</p>
@@ -113,7 +108,6 @@ function mostrarResultados() {
             </div>
         `).join('');
     }
-    // Botón para volver al catálogo completo
     const volverBtn = document.createElement('button');
     volverBtn.className = 'btn btn-outline';
     volverBtn.textContent = '↩ Ver todo el catálogo';
