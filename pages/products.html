@@ -44,7 +44,7 @@
                 return;
             }
 
-            const productos = window.CONFIG.products; // Todos; para solo en stock: .filter(p => p.inStock)
+            const productos = window.CONFIG.products;
 
             if (productos.length === 0) {
                 container.innerHTML = '<p>No hay productos disponibles en este momento.</p>';
@@ -53,7 +53,9 @@
 
             container.innerHTML = productos.map(p => `
                 <div class="product-card">
-                    <img src="${p.image}" alt="${p.name}" loading="lazy">
+                    <div class="image-wrapper">
+                        <img src="${p.image}" alt="${p.name}" loading="lazy">
+                    </div>
                     <div class="product-info">
                         <h3>${p.name}</h3>
                         <p>${p.description}</p>
