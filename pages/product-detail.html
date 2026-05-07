@@ -18,20 +18,26 @@
     <div id="site-header"></div>
     <main class="container product-detail">
         <div class="gallery">
-            <img id="product-img" src="" alt="">
-            <button onclick="sliderPrev()">◀</button>
-            <button onclick="sliderNext()">▶</button>
+            <img id="product-img" src="" alt="" class="main-image">
+            <div class="gallery-controls">
+                <button onclick="sliderPrev()" class="btn btn-outline btn-small">◀</button>
+                <button onclick="sliderNext()" class="btn btn-outline btn-small">▶</button>
+            </div>
         </div>
-        <div class="info">
+        <div class="product-info-panel">
             <h1 id="product-name"></h1>
             <p id="product-desc"></p>
             <span id="product-price" class="price"></span>
-            <ul id="discount-info"></ul>
+            <div class="discount-box">
+                <h4>Descuentos por volumen</h4>
+                <ul id="discount-info"></ul>
+            </div>
             <div class="quantity-selector">
                 <label for="quantity">Cantidad:</label>
                 <input type="number" id="quantity" value="1" min="1">
             </div>
             <button id="add-to-cart" class="btn btn-primary">Añadir al carrito</button>
+            <button onclick="window.history.back()" class="btn btn-outline btn-small" style="margin-top:1rem;">← Volver</button>
         </div>
     </main>
     <div id="site-footer"></div>
