@@ -1,14 +1,24 @@
 <header>
     <nav>
-        <a href="index.html" class="nav-brand">El Rincón Artesanal</a>
-        <button class="menu-toggle" aria-label="Menú">☰</button>
+        <a href="index.html" class="nav-brand">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: middle; margin-right: 8px;">
+                <circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 1 0 20"/>
+            </svg>
+            El Rincón Artesanal
+        </a>
+        <button class="menu-toggle" aria-label="Menú">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+        </button>
         <ul class="nav-links">
             <li><a href="index.html">Inicio</a></li>
             <li><a href="pages/about.html">Acerca de</a></li>
             <li><a href="pages/products.html">Productos</a></li>
             <li><a href="pages/services.html">Servicios</a></li>
             <li><a href="pages/contact.html">Contacto</a></li>
-            <li><a href="pages/cart.html">Carrito <span id="cart-count">0</span></a></li>
+            <li><a href="pages/cart.html" class="cart-link">🛒 <span id="cart-count">0</span></a></li>
+            <li><button id="theme-toggle" class="btn-icon" aria-label="Cambiar tema">🌙</button></li>
         </ul>
     </nav>
 </header>
