@@ -55,7 +55,7 @@ const CONFIG = {
       name: 'Macetón para exteriores',
       description: 'Gran resistencia, con orificio de drenaje. 40 cm alto.',
       price: 950,
-      image: 'assets/images/products/maceton-exterior.jpg',
+      image: 'assets/images/products/maceton-exterior.webp',
       category: 'exterior',
       style: 'rústico',
       size: 'grande',
