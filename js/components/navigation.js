@@ -1,14 +1,16 @@
 // js/components/navigation.js
 document.addEventListener('DOMContentLoaded', async () => {
-    // Cargar includes
+    // Detectar la raíz del sitio para rutas relativas correctas
+    const basePath = window.location.pathname.includes('/pages/') ? '../' : '';
+
     async function loadInclude(id, url) {
         try {
-            const resp = await fetch(url);
+            const resp = await fetch(basePath + url);
             if (resp.ok) {
                 document.getElementById(id).innerHTML = await resp.text();
             }
         } catch (e) {
-            console.warn('No se pudo cargar ' + url);
+            console.warn('No se pudo cargar ' + basePath + url);
         }
     }
 
@@ -23,6 +25,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     // Actualizar contador del carrito
-    if (window.cart) window.cart.updateCartCount();
-
+    if (window.cart && typeof window.cart.updateCartCount === 'function') {
+        window.cart.updateCartCount();
+    }
 });
