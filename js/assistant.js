@@ -62,6 +62,7 @@ function mostrarPregunta() {
     }
     const q = preguntas[paso];
     const cont = document.getElementById('assistant-content');
+    if (!cont) return;
     cont.innerHTML = `<h3>${q.pregunta}</h3>`;
     q.opciones.forEach(op => {
         const btn = document.createElement('button');
@@ -83,6 +84,10 @@ function mostrarPregunta() {
 }
 
 function mostrarResultados() {
+    // Detectar si estamos en pages/ para ajustar la ruta de las imágenes
+    const isInPages = window.location.pathname.includes('/pages/');
+    const basePath = isInPages ? '../' : '';
+
     const filtrados = CONFIG.products.filter(p => {
         return (!respuestas.category || p.category === respuestas.category) &&
                (!respuestas.style || p.style === respuestas.style) &&
@@ -90,13 +95,14 @@ function mostrarResultados() {
                p.inStock;
     });
     const cont = document.getElementById('assistant-content');
+    if (!cont) return;
     if (filtrados.length === 0) {
         cont.innerHTML = '<p>No encontramos piezas exactas, pero te sugerimos revisar nuestro catálogo completo.</p>';
     } else {
         cont.innerHTML = filtrados.map(p => `
             <div class="product-card">
                 <div class="image-wrapper">
-                    <img src="${p.image}" alt="${p.name}">
+                    <img src="${basePath}${p.image}" alt="${p.name}">
                 </div>
                 <div class="product-info">
                     <h3>${p.name}</h3>
