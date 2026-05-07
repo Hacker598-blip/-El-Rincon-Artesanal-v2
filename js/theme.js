@@ -1,22 +1,25 @@
 // js/theme.js
-// Función para aplicar un tema (cambia el atributo y recarga la hoja de estilos)
 function applyTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
 
+    // Buscar el enlace dinámico que ya existe (tiene data-theme-link)
     const existing = document.querySelector('link[data-theme-link]');
     if (existing) {
-        existing.href = `css/themes/${theme}.css`;
+        // Obtener la ruta base del href actual (ej. 'css/themes/' o '../css/themes/')
+        const currentHref = existing.getAttribute('href');
+        const basePath = currentHref.substring(0, currentHref.lastIndexOf('/') + 1);
+        existing.href = basePath + theme + '.css';
     }
 
-    // Actualizar el texto/icono del botón si ya existe
+    // Actualizar el ícono del botón si ya existe
     const toggle = document.getElementById('theme-toggle');
     if (toggle) {
         toggle.textContent = theme === 'dark' ? '☀️' : '🌙';
     }
 }
 
-// Delegación de eventos: escucha clicks en todo el documento y actúa si el target es el botón
+// Delegación de eventos para el botón (funciona aunque se cargue después)
 document.addEventListener('click', (e) => {
     if (e.target.id === 'theme-toggle') {
         const current = localStorage.getItem('theme') || 'dark';
@@ -24,7 +27,7 @@ document.addEventListener('click', (e) => {
     }
 });
 
-// Función expuesta para que navigation.js la ejecute cuando el header esté listo
+// Función que sincroniza el ícono del botón después de cargar el header
 function initThemeIcon() {
     const saved = localStorage.getItem('theme') || 'dark';
     const toggle = document.getElementById('theme-toggle');
