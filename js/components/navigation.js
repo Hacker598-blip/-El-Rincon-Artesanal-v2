@@ -25,8 +25,4 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Actualizar contador del carrito
     if (window.cart) window.cart.updateCartCount();
 
-    // Establecer el icono del tema (el botón ya existe)
-    if (typeof initThemeIcon === 'function') {
-        initThemeIcon();
-    }
 });
