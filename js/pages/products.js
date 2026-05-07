@@ -1,10 +1,18 @@
-// js/pages/products.js
 document.addEventListener('DOMContentLoaded', () => {
     const container = document.getElementById('all-products');
     if (!container) return;
 
-    // Mostrar todos los productos en stock (o todos si no se filtra por stock)
-    const productos = CONFIG.products.filter(p => p.inStock); // puedes quitar el filtro si quieres mostrar todos
+    if (!window.CONFIG || !window.CONFIG.products) {
+        container.innerHTML = '<p>Error: no se pudo cargar la información de productos.</p>';
+        return;
+    }
+
+    const productos = window.CONFIG.products; // o .filter(p => p.inStock) si quieres solo con stock
+
+    if (productos.length === 0) {
+        container.innerHTML = '<p>No hay productos disponibles en este momento.</p>';
+        return;
+    }
 
     container.innerHTML = productos.map(p => `
         <div class="product-card">
@@ -17,7 +25,4 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         </div>
     `).join('');
-
-    // El asistente NO se inicia automáticamente.
-    // Solo se activa al hacer clic en el botón "Asistente de selección" (ya definido en products.html)
 });
