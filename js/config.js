@@ -91,7 +91,7 @@ const CONFIG = {
       name: 'Conjunto de 3 macetas rústicas',
       description: 'Pack ahorro: tres macetas de distintos tamaños.',
       price: 850,
-      image: 'assets/images/products/pack-rustico.jpg',
+      image: 'assets/images/products/pack-rustico.webp',
       category: 'interior',
       style: 'rústico',
       size: 'mediano',
