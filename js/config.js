@@ -31,7 +31,7 @@ const CONFIG = {
       name: 'Jarrón minimalista',
       description: 'Diseño limpio para espacios modernos. Alto 30 cm.',
       price: 680,
-      image: 'assets/images/products/jarron-minimalista.jpg',
+      image: 'assets/images/products/jarron-minimalista.webp',
       category: 'interior',
       style: 'moderno',
       size: 'mediano',
