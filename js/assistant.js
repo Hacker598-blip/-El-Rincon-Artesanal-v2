@@ -74,7 +74,6 @@ function mostrarPregunta() {
         };
         cont.appendChild(btn);
     });
-    // Botón para salir
     const salirBtn = document.createElement('button');
     salirBtn.className = 'btn btn-outline';
     salirBtn.textContent = '↩ Volver al catálogo';
