@@ -6,7 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const featured = CONFIG.products.filter(p => p.featured && p.inStock);
   container.innerHTML = featured.map(p => `
     <div class="product-card">
-      <img src="${p.image}" alt="${p.name}" loading="lazy">
+      <div class="image-wrapper">
+        <img src="${p.image}" alt="${p.name}" loading="lazy">
+      </div>
       <div class="product-info">
         <h3>${p.name}</h3>
         <p>${p.description}</p>
