@@ -17,19 +17,88 @@
 <body>
     <div id="site-header"></div>
     <main class="container">
+        <!-- Hero principal del negocio -->
         <section class="about-hero">
             <div class="about-hero-text">
-                <h1>Luis Manuel Rodríguez Peña</h1>
-                <p>Alfarero cubano con más de 6 años de experiencia. Cada pieza nace del barro local y de técnicas transmitidas por generaciones. Su filosofía: <em>“La tierra nos habla; mi labor es darle voz”</em>.</p>
+                <h1>El Rincón Artesanal</h1>
+                <p>Un equipo apasionado que transforma el barro en piezas con alma. Tradición, dedicación y amor por el trabajo hecho a mano.</p>
             </div>
-            <img src="../assets/images/team/luis-manuel.jpg" alt="Luis Manuel en el torno" class="about-portrait" loading="lazy">
+            <!-- Imagen representativa (puede ser del taller) -->
+            <img src="../assets/images/team/luis-manuel.jpg" alt="Taller de alfarería" class="about-portrait" loading="lazy">
         </section>
 
+        <!-- Tarjetas del equipo -->
+        <section class="team-section">
+            <h2>Conoce a nuestro equipo</h2>
+            <div class="team-grid">
+                <!-- Luis Manuel -->
+                <div class="team-card">
+                    <img src="../assets/images/team/luis-manuel.jpg" alt="Luis Manuel Rodríguez Peña" class="team-photo">
+                    <h3>Luis Manuel Rodríguez Peña</h3>
+                    <p class="team-role">Maestro alfarero · Dueño del taller</p>
+                    <p>Con más de 6 años de experiencia, da vida al barro con técnicas heredadas. Es el corazón creativo detrás de cada pieza.</p>
+                </div>
+
+                <!-- Yamilet -->
+                <div class="team-card">
+                    <div class="team-icon">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="1.5">
+                            <circle cx="12" cy="8" r="4"/>
+                            <path d="M4 20c0-4 4-7 8-7s8 3 8 7"/>
+                        </svg>
+                    </div>
+                    <h3>Yamilet Silva García</h3>
+                    <p class="team-role">Apoyo en decoración · Responsable legal</p>
+                    <p>Encargada de trámites, licencias y permisos en Cuba. También aporta su toque en la decoración de las piezas.</p>
+                </div>
+
+                <!-- Yoana -->
+                <div class="team-card">
+                    <div class="team-icon">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="1.5">
+                            <circle cx="12" cy="8" r="4"/>
+                            <path d="M4 20c0-4 4-7 8-7s8 3 8 7"/>
+                        </svg>
+                    </div>
+                    <h3>Yoana</h3>
+                    <p class="team-role">Ayudante de decoración</p>
+                    <p>Colabora en los acabados y detalles que hacen únicas a nuestras piezas.</p>
+                </div>
+
+                <!-- Yunier -->
+                <div class="team-card">
+                    <div class="team-icon">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="1.5">
+                            <circle cx="12" cy="8" r="4"/>
+                            <path d="M4 20c0-4 4-7 8-7s8 3 8 7"/>
+                        </svg>
+                    </div>
+                    <h3>Yunier</h3>
+                    <p class="team-role">Ayudante de decoración y preparación</p>
+                    <p>Apoya en el colado, amasado del barro y en los toques finales de cada obra.</p>
+                </div>
+
+                <!-- Jesús Emanuel -->
+                <div class="team-card">
+                    <div class="team-icon">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="1.5">
+                            <circle cx="12" cy="8" r="4"/>
+                            <path d="M4 20c0-4 4-7 8-7s8 3 8 7"/>
+                        </svg>
+                    </div>
+                    <h3>Jesús Emanuel Rodríguez Vázquez</h3>
+                    <p class="team-role">Propietario del sitio · Desarrollador</p>
+                    <p>Ingeniero en desarrollo de software, responsable de la arquitectura, diseño y programación de esta plataforma. Máximo poder ejecutivo sobre la web.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Servicios destacados (se mantiene) -->
         <section class="about-details">
             <div>
                 <h2>Tradición y dedicación</h2>
-                <p>Desde joven aprendió el oficio en el taller familiar. Hoy combina métodos ancestrales con diseños contemporáneos, creando macetas, jarrones y fuentes que reflejan la identidad cubana. Trabaja con barro de la región y hornea en horno de leña, garantizando piezas únicas.</p>
-                <p>Cada encargo es una conversación: tamaños, colores esmaltados, grabados personalizados… Luis Manuel escucha y moldea tus ideas con barro.</p>
+                <p>Desde joven aprendió el oficio en el taller familiar. Hoy combinamos métodos ancestrales con diseños contemporáneos, creando macetas, jarrones y fuentes que reflejan la identidad cubana. Trabajamos con barro de la región y horneamos en horno de leña, garantizando piezas únicas.</p>
+                <p>Cada encargo es una conversación: tamaños, colores esmaltados, grabados personalizados… Escuchamos tus ideas y las moldeamos con barro.</p>
             </div>
             <div class="about-services">
                 <h3>Servicios destacados</h3>
@@ -42,13 +111,14 @@
             </div>
         </section>
 
+        <!-- Crédito del desarrollador (ya aparece en la tarjeta, pero se deja como nota adicional si se desea) -->
         <section class="developer-section">
             <div class="developer-card">
                 <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-7 8-7s8 3 8 7"/></svg>
                 <div>
-                    <h2>Desarrollador del sitio</h2>
+                    <h2>Sitio web desarrollado por</h2>
                     <h3>Jesús Emanuel Rodríguez Vázquez</h3>
-                    <p>Ingeniero en desarrollo de software, responsable de la arquitectura, diseño visual y programación completa de esta plataforma. Su trabajo garantiza una experiencia rápida, accesible y moderna para todos los clientes de El Rincón Artesanal.</p>
+                    <p>Ingeniero en desarrollo de software, diseñador, programador y mantenedor de esta plataforma. Su trabajo garantiza una experiencia rápida, accesible y moderna para todos los clientes de El Rincón Artesanal.</p>
                     <p>Contacto profesional: <a href="mailto:jesus.rodriguez@example.com">jesus.rodriguez@example.com</a></p>
                     <a href="https://github.com/hacker598-blip" target="_blank" rel="noopener" class="btn btn-outline btn-small">Portafolio en GitHub</a>
                 </div>
