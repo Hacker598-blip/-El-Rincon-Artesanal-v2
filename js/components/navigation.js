@@ -23,21 +23,34 @@ document.addEventListener('DOMContentLoaded', async () => {
     // --- AJUSTE INTELIGENTE DE ENLACES DEL HEADER ---
     if (isInPagesFolder) {
         const header = document.getElementById('site-header');
-        if (!header) return;
+        if (header) {
+            const headerLinks = header.querySelectorAll('.nav-links a');
+            headerLinks.forEach(link => {
+                const originalHref = link.getAttribute('href');
+                if (!originalHref) return;
+                if (originalHref.startsWith('pages/') || originalHref === 'index.html') {
+                    link.setAttribute('href', '../' + originalHref);
+                }
+            });
+        }
 
-        const links = header.querySelectorAll('.nav-links a');
-        links.forEach(link => {
-            const originalHref = link.getAttribute('href');
-            if (!originalHref) return;
-
-            // Solo corregimos rutas relativas simples que empiecen con "pages/" o sean "index.html"
-            // Las rutas que ya empiezan con "../" o son absolutas no se tocan.
-            if (originalHref.startsWith('pages/') || originalHref === 'index.html') {
-                // Desde una página dentro de pages/, la ruta correcta es subir un nivel
-                link.setAttribute('href', '../' + originalHref);
-            }
-            // Cualquier otra forma (http, /, ../) se respeta
-        });
+        // --- AJUSTE INTELIGENTE DE ENLACES DEL FOOTER ---
+        const footer = document.getElementById('site-footer');
+        if (footer) {
+            const footerLinks = footer.querySelectorAll('a');
+            footerLinks.forEach(link => {
+                const originalHref = link.getAttribute('href');
+                if (!originalHref) return;
+                // Solo ajustar rutas relativas que empiecen con "pages/" o sean "index.html"
+                if (originalHref.startsWith('pages/') || originalHref === 'index.html') {
+                    link.setAttribute('href', '../' + originalHref);
+                }
+                // Para sitemap.xml, también ajustar si es relativo
+                if (originalHref === 'sitemap.xml') {
+                    link.setAttribute('href', '../' + originalHref);
+                }
+            });
+        }
     }
 
     // Menú móvil
